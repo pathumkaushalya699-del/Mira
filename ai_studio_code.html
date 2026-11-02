@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover"/>
+  <title>Mira — Curated Amazon KDP Resources & Indie Publishing</title>
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-high": "#ede7df",
+            "on-tertiary-container": "#9996c8",
+            "secondary-fixed-dim": "#ffb86f",
+            "surface-container-low": "#f9f3ea",
+            "inverse-on-surface": "#f6f0e7",
+            "on-secondary-container": "#643900",
+            "surface-dim": "#dfd9d1",
+            "background": "#fff9ef",
+            "primary": "#171258",
+            "on-primary": "#ffffff",
+            "surface-variant": "#e7e2d9",
+            "on-tertiary-fixed-variant": "#44426e",
+            "inverse-primary": "#c3c0ff",
+            "tertiary": "#1a1842",
+            "on-secondary-fixed": "#2c1600",
+            "secondary-fixed": "#ffdcbd",
+            "outline-variant": "#c8c5d2",
+            "on-error-container": "#93000a",
+            "surface": "#fff9ef",
+            "error": "#ba1a1a",
+            "surface-container": "#f3ede4",
+            "tertiary-fixed": "#e3dfff",
+            "on-primary-fixed-variant": "#413e83",
+            "primary-container": "#2d2a6e",
+            "inverse-surface": "#32302a",
+            "on-tertiary-fixed": "#181640",
+            "on-surface-variant": "#474650",
+            "tertiary-container": "#302e59",
+            "surface-tint": "#59569c",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed-dim": "#c4c1f6",
+            "on-surface": "#1d1b16",
+            "surface-container-highest": "#e7e2d9",
+            "error-container": "#ffdad6",
+            "primary-fixed-dim": "#c3c0ff",
+            "surface-bright": "#fff9ef",
+            "secondary": "#8a5100",
+            "on-primary-fixed": "#140e56",
+            "primary-fixed": "#e2dfff",
+            "on-error": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "outline": "#787681",
+            "on-primary-container": "#9794df",
+            "secondary-container": "#fe9800",
+            "surface-container-lowest": "#ffffff",
+            "on-background": "#1d1b16",
+            "on-secondary-fixed-variant": "#693c00"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans", "sans-serif"],
+            "body": ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .fill-1 { font-variation-settings: 'FILL' 1; }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-screen flex flex-col selection:bg-secondary-container/30">
+
+  <!-- ================= TOP HEADER ================= -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-surface/90 backdrop-blur-md border-b border-surface-container shadow-[0_1px_8px_rgba(45,42,110,0.03)]">
+    <div class="h-16 lg:h-20 max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-2 group">
+        <img alt="Mira Brand Logo" class="h-8 w-auto object-contain transition-transform group-hover:scale-105" 
+             src="https://lh3.googleusercontent.com/aida/AEtjO1UcJR2XOgtwDcpi8E0u4snl7zUSTrbco-OV2ckLZD2l9nv3YhNZ2KpZY_qU73gUdueBm_Sk9ituGy-uOQHDHU0o0GRsZU3hctIxv6YHMj1_4fLzuFZG1z1h0Hj6tY3J6Ffy_Vliwwvd2kzjwSoMVXVmKVLUFHZH1AEY6i0sKT_WRNSZNO7eaozllOsWWI2ON4L2tNWK65aIv_X2eNEKqKo6wHRC4D6KMX39Ed0gReQe"/>
+        <span class="font-headline font-bold text-2xl text-primary tracking-tight">Mira</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-6">
+        <a href="#picks" class="bg-surface-container text-primary font-semibold text-sm rounded-full px-4 py-1.5 transition-colors">Top Picks</a>
+        <a href="#calculator" class="text-on-surface-variant hover:text-primary font-medium text-sm transition-colors">Royalty Calc</a>
+        <a href="#how-it-works" class="text-on-surface-variant hover:text-primary font-medium text-sm transition-colors">How KDP Works</a>
+        <a href="#tools-matrix" class="text-on-surface-variant hover:text-primary font-medium text-sm transition-colors">Tool Matrix</a>
+        <a href="#blog" class="text-on-surface-variant hover:text-primary font-medium text-sm transition-colors">Guides</a>
+      </nav>
+
+      <!-- Action Items & Quick Tools -->
+      <div class="flex items-center gap-2.5">
+        <!-- Search Trigger -->
+        <button onclick="toggleSearchModal(true)" aria-label="Search" class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[20px]">search</span>
+        </button>
+
+        <!-- Saved Counter Pill -->
+        <button onclick="toggleSavedDrawer(true)" class="relative w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="Saved Items">
+          <span class="material-symbols-outlined text-[20px]">bookmark</span>
+          <span id="saved-badge-count" class="absolute -top-1 -right-1 bg-secondary-container text-tertiary text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center hidden">0</span>
+        </button>
+
+        <!-- Lead Magnet CTA -->
+        <button onclick="openLeadModal()" class="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-secondary-container text-tertiary px-4 py-2 font-semibold text-sm shadow-sm hover:brightness-95 active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-[18px]">download</span>
+          <span>Free Guide</span>
+        </button>
+
+        <!-- User Avatar -->
+        <div class="flex items-center pl-1">
+          <img alt="Author Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary-container/40" 
+               src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2yPoXm7Prm9MkXDYjHufqF3bHsDHqEIYJIU9fCuIromXPRD_5VZRO60iXdWKpgW6sHj7W20ugM9WUMBh17MEGQK4X-RBQUSPwazJVnz-yrm4kXUaVi2HmCjftazbiWu_pXmamWQeAHBwukcfRCujKw8LNlYsJMHbScSOiZV4CPOfxKKvCMxiE9fpSJyg4mN7-3KikfyUhWlIAZhMsfZkDioVSXtbk0dwNQ4FAYXs"/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow pt-16 lg:pt-20">
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative overflow-hidden bg-surface py-10 lg:py-16">
+      <div class="absolute -top-32 left-1/4 w-96 h-96 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/2 right-10 w-[500px] h-[500px] rounded-full bg-primary-container/5 blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- Left Column -->
+          <div class="lg:col-span-7 flex flex-col gap-5">
+            <div class="inline-flex items-center gap-1.5 self-start px-3.5 py-1.5 rounded-full bg-surface-container text-tertiary">
+              <span class="material-symbols-outlined text-[16px] text-secondary fill-1">verified</span>
+              <span class="text-xs uppercase font-bold tracking-wider">Verified Amazon KDP Recommendations & Guides</span>
+            </div>
+
+            <h1 class="font-headline font-extrabold text-3xl sm:text-4xl lg:text-5xl text-primary tracking-tight leading-[1.15]">
+              Discover the Best Books & <span class="text-secondary">KDP Resources</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-on-surface-variant max-w-xl leading-relaxed">
+              Empowering indie authors, low-content publishers, and book lovers with vetted publishing software, formatting blueprints, niche intelligence, and royalty strategies.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-3 pt-1">
+              <a href="#picks" class="inline-flex items-center gap-2 bg-secondary-container hover:bg-secondary-fixed-dim text-tertiary font-semibold text-sm sm:text-base px-6 py-3 rounded-full shadow-md transition-all transform hover:-translate-y-0.5 active:scale-95">
+                <span>Browse Top Picks</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </a>
+              <a href="#calculator" class="inline-flex items-center gap-2 bg-surface-container-lowest text-primary hover:bg-surface-container font-semibold text-sm sm:text-base px-6 py-3 rounded-full shadow-sm border border-surface-container transition-all">
+                <span class="material-symbols-outlined text-[18px] text-secondary">calculate</span>
+                <span>Royalty Calculator</span>
+              </a>
+            </div>
+
+            <!-- Trust rating -->
+            <div class="flex items-center gap-2 text-on-surface-variant pt-2">
+              <div class="flex items-center text-secondary">
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-1">star_half</span>
+              </div>
+              <p class="text-xs sm:text-sm">
+                <strong class="text-on-surface font-semibold">4.9/5</strong> rated by 12,000+ indie authors <span class="mx-1">•</span> Tested in Q2 2025
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Showcase -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative bg-surface-container-lowest rounded-2xl p-5 sm:p-6 shadow-xl border border-surface-container">
+              <div class="flex items-center justify-between pb-4">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-3 h-3 rounded-full bg-error"></span>
+                  <span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+                  <span class="w-3 h-3 rounded-full bg-surface-tint"></span>
+                  <span class="ml-2 text-xs font-mono text-on-surface-variant">kdp-author-suite.dashboard</span>
+                </div>
+                <span class="px-2.5 py-0.5 rounded-full bg-surface-container text-tertiary text-xs font-semibold">Live Royalty Sync</span>
+              </div>
+
+              <div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-surface-container-low flex flex-col justify-end p-5">
+                <img class="absolute inset-0 w-full h-full object-cover" 
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuASWEAWOYI3iqr9QrHa7GIa7TUiFCSWtuLhsM4hNVB13i2xxI5UOpesugemrsno1D7E8Qa643zsAmM7-9xW8fpelMikQ1xGxXVUx6FPJxSXTnZ1e-4TbVOu1GymT1vHH6YPE7NsUjlF1Ir3C9K-ZYX3NIpkbr9dHZr-0P6IwAVYNtf8oA-jxNzGVgGwwebbER3gUvwoOhIK0XxZ7eA2SVxq22HI8oIZgFmNI1qUJzs"
+                     alt="Editorial desk with laptop showing Kindle Direct Publishing analytics"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+                <div class="relative z-10 text-on-primary">
+                  <span class="text-xs uppercase tracking-wider font-semibold text-secondary-container">Bestseller Blueprint</span>
+                  <h3 class="font-headline font-bold text-xl text-white">The 2025 KDP Launchpad</h3>
+                  <p class="text-xs text-surface-variant">Turn low-content assets into steady monthly royalties.</p>
+                </div>
+              </div>
+
+              <!-- Floating Badges -->
+              <div class="absolute -top-3 -right-3 bg-primary text-on-primary px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1 text-xs font-semibold">
+                <span class="material-symbols-outlined text-[16px] text-secondary-container">trending_up</span>
+                <span>+340% Royalties</span>
+              </div>
+              <div class="absolute -bottom-3 -left-3 bg-surface-container-lowest text-tertiary px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1 text-xs font-bold border border-surface-container">
+                <span class="material-symbols-outlined text-[16px] text-secondary fill-1">workspace_premium</span>
+                <span class="text-primary">Top Tested 2025</span>
+              </div>
+
+              <!-- Mini Stats -->
+              <div class="grid grid-cols-3 gap-2 pt-4 text-center">
+                <div class="p-2 rounded-lg bg-surface-container-low">
+                  <p class="text-[11px] text-on-surface-variant uppercase font-medium">Active Niches</p>
+                  <p class="font-headline font-bold text-base text-primary">1,480+</p>
+                </div>
+                <div class="p-2 rounded-lg bg-surface-container-low">
+                  <p class="text-[11px] text-on-surface-variant uppercase font-medium">Avg ROI</p>
+                  <p class="font-headline font-bold text-base text-secondary">3.8x</p>
+                </div>
+                <div class="p-2 rounded-lg bg-surface-container-low">
+                  <p class="text-[11px] text-on-surface-variant uppercase font-medium">Verified Tools</p>
+                  <p class="font-headline font-bold text-base text-primary">48</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CATEGORY FILTER CHIPS -->
+    <section class="sticky top-16 lg:top-20 z-30 w-full bg-surface-container-low/95 backdrop-blur-md border-y border-surface-container py-3">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="flex items-center justify-between pb-1.5">
+          <h2 class="text-xs uppercase tracking-wider font-semibold text-on-surface-variant">Filter by Category</h2>
+          <span id="active-tag-label" class="text-xs text-secondary font-semibold">Showing all categories</span>
+        </div>
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1" id="category-chips">
+          <!-- Filled dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FEATURED PICKS (Interactive Directory) -->
+    <section class="w-full bg-surface py-12 lg:py-16" id="picks">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col gap-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-1.5 text-secondary text-xs uppercase tracking-wider font-bold">
+              <span class="material-symbols-outlined text-[16px]">stars</span>
+              <span>Handpicked &amp; Vetted Software and Books</span>
+            </div>
+            <h2 class="font-headline font-extrabold text-2xl lg:text-3xl text-primary pt-1">
+              Top Tested KDP Gear & Software
+            </h2>
+          </div>
+          <p class="text-sm text-on-surface-variant max-w-md">
+            Tested in real Amazon production runs. Click any card for detailed specs or to save to your personal shelf.
+          </p>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="products-grid">
+          <!-- Cards rendered by JS -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. INTERACTIVE KDP ROYALTY CALCULATOR -->
+    <section class="w-full bg-surface-container-low py-12 lg:py-16 border-y border-surface-container" id="calculator">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="bg-surface-container-lowest rounded-3xl p-6 lg:p-10 shadow-sm border border-surface-container">
+          <div class="max-w-3xl mx-auto text-center mb-8">
+            <span class="text-xs font-bold uppercase tracking-widest text-secondary">Author Planning Tool</span>
+            <h2 class="font-headline font-extrabold text-2xl lg:text-3xl text-primary pt-1">
+              Live Amazon KDP Paperback Royalty Calculator
+            </h2>
+            <p class="text-sm text-on-surface-variant pt-2">
+              Estimate Amazon printing costs and net royalties instantly based on Amazon's standard formula: <br class="hidden sm:inline"/>
+              <code class="text-xs bg-surface-container px-2 py-0.5 rounded text-tertiary font-mono">(List Price × 60%) - Print Cost = Net Royalty</code>
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Inputs -->
+            <div class="lg:col-span-7 space-y-4">
+              <div>
+                <label class="block text-xs font-bold uppercase text-on-surface-variant mb-1">Interior Print Type</label>
+                <div class="grid grid-cols-3 gap-2">
+                  <button type="button" onclick="setCalcInterior('bw', this)" class="calc-type-btn py-2 px-3 text-xs font-semibold rounded-xl bg-primary text-on-primary">
+                    B&W Standard
+                  </button>
+                  <button type="button" onclick="setCalcInterior('premium-color', this)" class="calc-type-btn py-2 px-3 text-xs font-semibold rounded-xl bg-surface-container text-tertiary hover:bg-surface-container-high">
+                    Premium Color
+                  </button>
+                  <button type="button" onclick="setCalcInterior('standard-color', this)" class="calc-type-btn py-2 px-3 text-xs font-semibold rounded-xl bg-surface-container text-tertiary hover:bg-surface-container-high">
+                    Standard Color
+                  </button>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <div class="flex justify-between items-center mb-1">
+                    <label class="text-xs font-bold uppercase text-on-surface-variant">Page Count</label>
+                    <span id="page-count-val" class="text-xs font-mono font-bold text-primary">120 pages</span>
+                  </div>
+                  <input id="input-pages" type="range" min="24" max="800" value="120" step="2" oninput="updateCalculator()"
+                         class="w-full accent-secondary-container cursor-pointer"/>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold uppercase text-on-surface-variant mb-1">List Price ($ USD)</label>
+                  <div class="relative">
+                    <span class="absolute left-3 top-2.5 text-on-surface-variant font-semibold text-sm">$</span>
+                    <input id="input-price" type="number" min="3.50" max="150" step="0.50" value="9.99" oninput="updateCalculator()"
+                           class="w-full pl-7 pr-3 py-2 rounded-xl border border-surface-container bg-surface font-headline font-bold text-primary focus:outline-none focus:ring-2 focus:ring-secondary-container"/>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-3 rounded-xl bg-surface-container flex items-center gap-2 text-xs text-on-surface-variant">
+                <span class="material-symbols-outlined text-[18px] text-secondary">info</span>
+                <span>Calculations assume standard paperback distribution on Amazon.com with 60% royalty rate.</span>
+              </div>
+            </div>
+
+            <!-- Output Card -->
+            <div class="lg:col-span-5 bg-primary text-on-primary rounded-2xl p-6 shadow-md flex flex-col justify-between">
+              <div>
+                <span class="text-xs uppercase font-bold text-secondary-container tracking-wider">Estimated Earnings Per Sale</span>
+                <div class="mt-2 flex items-baseline gap-2">
+                  <span id="calc-net-royalty" class="font-headline font-extrabold text-4xl text-secondary-container">$3.70</span>
+                  <span class="text-xs text-surface-variant">per paperback copy</span>
+                </div>
+              </div>
+
+              <div class="my-5 border-t border-primary-container pt-4 space-y-2 text-xs">
+                <div class="flex justify-between text-surface-variant">
+                  <span>List Price:</span>
+                  <span id="calc-summary-price" class="font-mono text-white font-semibold">$9.99</span>
+                </div>
+                <div class="flex justify-between text-surface-variant">
+                  <span>Amazon 40% Cut:</span>
+                  <span id="calc-summary-amazon" class="font-mono text-white font-semibold">$4.00</span>
+                </div>
+                <div class="flex justify-between text-surface-variant">
+                  <span>Printing Cost:</span>
+                  <span id="calc-summary-print" class="font-mono text-white font-semibold">$2.29</span>
+                </div>
+                <div class="flex justify-between text-secondary-container font-semibold pt-1 border-t border-primary-container">
+                  <span>Profit Margin:</span>
+                  <span id="calc-summary-margin" class="font-mono">37.0%</span>
+                </div>
+              </div>
+
+              <button onclick="openLeadModal('Royalty Calculator Preset')" class="w-full py-2.5 rounded-full bg-secondary-container text-tertiary font-bold text-xs uppercase tracking-wider hover:brightness-95 transition-all">
+                Download Full KDP Royalty Sheet PDF
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. HOW AMAZON KDP WORKS (3 Phase Engine) -->
+    <section class="w-full bg-surface py-12 lg:py-16" id="how-it-works">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col gap-8">
+        
+        <div class="text-center max-w-2xl mx-auto">
+          <span class="text-xs font-bold text-secondary uppercase tracking-widest">The Self-Publishing Engine</span>
+          <h2 class="font-headline font-extrabold text-2xl lg:text-3xl text-primary pt-1">
+            How Amazon KDP Works — From Idea to Royalties
+          </h2>
+          <p class="text-sm text-on-surface-variant pt-2">
+            Publish paperbacks, hardcovers, and ebooks globally without holding physical inventory or paying upfront costs.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Phase 1 -->
+          <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-surface-container flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary font-headline font-bold text-lg mb-4">
+                01
+              </div>
+              <div class="flex items-center gap-1.5 text-secondary text-xs uppercase font-bold tracking-wider mb-1">
+                <span class="material-symbols-outlined text-[20px]">design_services</span>
+                <span>Phase 1</span>
+              </div>
+              <h3 class="font-headline font-bold text-lg text-primary mb-2">Create &amp; Format Manuscript</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                Choose between low-content journals, planners, or full text. Create compliant interior PDFs and cover wrappers with Book Bolt or Canva.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-surface-container mt-4">
+              <button onclick="filterByCategory('Design & Interior Tools')" class="text-xs font-bold text-secondary hover:underline flex items-center gap-1">
+                Recommended design tools →
+              </button>
+            </div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-surface-container flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary font-headline font-bold text-lg mb-4">
+                02
+              </div>
+              <div class="flex items-center gap-1.5 text-secondary text-xs uppercase font-bold tracking-wider mb-1">
+                <span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+                <span>Phase 2</span>
+              </div>
+              <h3 class="font-headline font-bold text-lg text-primary mb-2">Upload &amp; Keyword Optimize</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                Upload your files to KDP, configure your 7 backend keyword boxes, and claim 3 specific browse categories with high buying intent.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-surface-container mt-4">
+              <button onclick="filterByCategory('Keyword & Niche Research')" class="text-xs font-bold text-secondary hover:underline flex items-center gap-1">
+                Keyword discovery tools →
+              </button>
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-surface-container flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary font-headline font-bold text-lg mb-4">
+                03
+              </div>
+              <div class="flex items-center gap-1.5 text-secondary text-xs uppercase font-bold tracking-wider mb-1">
+                <span class="material-symbols-outlined text-[20px]">payments</span>
+                <span>Phase 3</span>
+              </div>
+              <h3 class="font-headline font-bold text-lg text-primary mb-2">Automated Royalties (Up to 70%)</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                When a customer buys on Amazon, they print, pack, deliver via Prime, handle customer service, and deposit profit into your bank every 30 days.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-surface-container mt-4">
+              <a href="#calculator" class="text-xs font-bold text-secondary hover:underline flex items-center gap-1">
+                Calculate your profit per copy →
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. TOP KDP TOOLS COMPARISON TABLE -->
+    <section class="w-full bg-surface-container-low py-12 lg:py-16 border-t border-surface-container" id="tools-matrix">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col gap-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <span class="text-xs font-bold text-secondary uppercase tracking-widest">Vetted Matrix</span>
+            <h2 class="font-headline font-extrabold text-2xl lg:text-3xl text-primary pt-1">
+              Compare Top Self-Publishing Tools
+            </h2>
+          </div>
+          <p class="text-sm text-on-surface-variant max-w-md">
+            Unbiased breakdown tested by our editorial team based on workflow acceleration and margin compliance.
+          </p>
+        </div>
+
+        <div class="w-full overflow-x-auto rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container">
+          <table class="w-full text-left border-collapse min-w-[700px]">
+            <thead>
+              <tr class="bg-surface-container-high/60 text-primary text-xs uppercase tracking-wider font-bold">
+                <th class="py-4 px-6">Tool Name</th>
+                <th class="py-4 px-4">Best For</th>
+                <th class="py-4 px-4">Key Pros</th>
+                <th class="py-4 px-4">Rating</th>
+                <th class="py-4 px-4">Price</th>
+                <th class="py-4 px-6 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-surface-container-high text-xs text-on-surface" id="matrix-table-body">
+              <!-- Dynamically rendered -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. PUBLISHING DISPATCH (BLOG ARTICLES) -->
+    <section class="w-full bg-surface py-12 lg:py-16" id="blog">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col gap-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <span class="text-xs font-bold text-secondary uppercase tracking-widest">Publishing Dispatch</span>
+            <h2 class="font-headline font-extrabold text-2xl lg:text-3xl text-primary pt-1">
+              From the Mira Publishing Blog
+            </h2>
+          </div>
+          <p class="text-sm text-on-surface-variant max-w-md">
+            In-depth guides, niche research breakdowns, and algorithm updates compiled by independent authors.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Article 1 -->
+          <article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-surface-container flex flex-col justify-between group">
+            <div>
+              <div class="relative h-48 bg-surface-container overflow-hidden">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6LThlJha_e1GYdrCkr4zoByebWedyY1hVxnp5VFshlH8UcgmbZU4djjxN_3X_wVkiSdYRyveagFxWY4li4ULe4273PqRmHNlhEKSjKOVIU6IKK3Asq2n5k4WYQ-edjAGBtuhL94fy9tV9OtMPVP41gaMXjaH4em6kYikOgFXjjoo56vWOnvMzPb0myNSLzdiPfYFWZHrx9lRw4_OxhqF_wWWWnfZYN1QKgjvhfXI" 
+                     alt="Niche research notes on desk"/>
+                <span class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm text-primary text-[11px] font-bold px-2.5 py-1 rounded-full">
+                  Niche Research
+                </span>
+              </div>
+              <div class="p-5 space-y-2">
+                <div class="flex items-center justify-between text-on-surface-variant text-xs">
+                  <span>By Mira Editorial</span>
+                  <span>6 min read</span>
+                </div>
+                <h3 class="font-headline font-bold text-base text-primary group-hover:text-secondary transition-colors cursor-pointer">
+                  15 Profitable Low-Content KDP Niches Dominating Amazon in Q2 2025
+                </h3>
+                <p class="text-xs text-on-surface-variant line-clamp-3 leading-relaxed">
+                  Discover high-demand, low-competition subcategories that are generating consistent passive sales right now with zero ad spend.
+                </p>
+              </div>
+            </div>
+            <div class="p-5 pt-0">
+              <button onclick="readArticle('15 Profitable Low-Content KDP Niches')" class="text-xs font-bold text-secondary flex items-center gap-1 hover:underline">
+                <span>Read Full Guide</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-surface-container flex flex-col justify-between group">
+            <div>
+              <div class="relative h-48 bg-surface-container overflow-hidden">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuChO8gVfsjOJhBQI_qNqilatHpOvwgldkKVFvN5lwOl9a6ZE_vBA4j8_ZoIZuCThoqmrEFYDbi0FT7xvZr1D4TeDXtnpWpvsWvsuWxBjM1MIelaTYWyDU6Ev5CNO8lg8mXW2Y1S-BjoSUDc597oX0SEBretmXSDcbwUtAdW2gd5hJredC9shGnkB28C-neCfR4GLK0JGBNAPbrwnaOBX9s2eOPIhVZisTy2o68QlVM" 
+                     alt="Amazon Ads Dashboard"/>
+                <span class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm text-primary text-[11px] font-bold px-2.5 py-1 rounded-full">
+                  Amazon Ads
+                </span>
+              </div>
+              <div class="p-5 space-y-2">
+                <div class="flex items-center justify-between text-on-surface-variant text-xs">
+                  <span>By Marcus Vance</span>
+                  <span>9 min read</span>
+                </div>
+                <h3 class="font-headline font-bold text-base text-primary group-hover:text-secondary transition-colors cursor-pointer">
+                  The Complete Guide to Amazon KDP Sponsored Ads on a $5/Day Budget
+                </h3>
+                <p class="text-xs text-on-surface-variant line-clamp-3 leading-relaxed">
+                  How to target exact-match keywords without burning your budget, with real case study metrics and campaign spreadsheets.
+                </p>
+              </div>
+            </div>
+            <div class="p-5 pt-0">
+              <button onclick="readArticle('The Complete Guide to Amazon KDP Sponsored Ads')" class="text-xs font-bold text-secondary flex items-center gap-1 hover:underline">
+                <span>Read Full Guide</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-surface-container flex flex-col justify-between group">
+            <div>
+              <div class="relative h-48 bg-surface-container overflow-hidden">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuC11jJLDhyS1Bok__HODhNPB3bqqtMege8p2NqEyRkg19wEfaCe8bVWMwG4DeZrTVdGMsuXZQG7oHnOzF7B6E0pTFyy3M6Xq4AYZIYdMM6SV-u-ITGiiM2SqGt4mI1KHPuSQ22UqBstgOh_u3mpZYc3KJc1i4Uk1CqM6woUimKddRS5CG2Qz3bJHRdRsKsoa6fH9U7HV_TM5z6hcNgPs2rjdk1o8YIzxzUepIR0u6w" 
+                     alt="Bleed margin alignment rulers"/>
+                <span class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm text-primary text-[11px] font-bold px-2.5 py-1 rounded-full">
+                  Cover Design
+                </span>
+              </div>
+              <div class="p-5 space-y-2">
+                <div class="flex items-center justify-between text-on-surface-variant text-xs">
+                  <span>By Elena Rostova</span>
+                  <span>5 min read</span>
+                </div>
+                <h3 class="font-headline font-bold text-base text-primary group-hover:text-secondary transition-colors cursor-pointer">
+                  Amazon Bleed & Margin Rules: Avoid Rejected Proofs Every Time
+                </h3>
+                <p class="text-xs text-on-surface-variant line-clamp-3 leading-relaxed">
+                  Common print mistakes that get your KDP paperbacks flagged, and the 3-step checklist to pass automated inspection seamlessly.
+                </p>
+              </div>
+            </div>
+            <div class="p-5 pt-0">
+              <button onclick="readArticle('Amazon Bleed & Margin Rules')" class="text-xs font-bold text-secondary flex items-center gap-1 hover:underline">
+                <span>Read Full Guide</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. NEWSLETTER / LEAD MAGNET -->
+    <section class="w-full bg-surface-container-low py-12 lg:py-16">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="relative bg-primary text-on-primary rounded-3xl p-8 lg:p-14 shadow-xl overflow-hidden border border-primary-container">
+          <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-secondary-container/15 blur-2xl pointer-events-none"></div>
+
+          <div class="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-surface-container-lowest/10 flex items-center justify-center text-secondary-container">
+              <span class="material-symbols-outlined text-[28px]">mark_email_read</span>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-widest text-secondary-container">Free Instant Download</span>
+            <h2 class="font-headline font-extrabold text-2xl lg:text-4xl text-on-primary">
+              Get Your Free 2025 KDP Launch Checklist
+            </h2>
+            <p class="text-sm text-surface-variant max-w-xl">
+              Join 18,500+ self-publishers. We share weekly profitable niche alerts, margin cheat sheets, and verified discounts straight to your inbox.
+            </p>
+
+            <form class="w-full max-w-md flex flex-col sm:flex-row gap-2 pt-2" onsubmit="handleNewsletterSubmit(event)">
+              <input id="hero-nl-email" class="flex-1 px-5 py-3 rounded-full bg-surface text-on-surface placeholder:text-on-surface-variant text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-secondary-container" placeholder="Enter your author email..." required type="email"/>
+              <button class="bg-secondary-container hover:bg-secondary-fixed-dim text-tertiary font-bold text-xs sm:text-sm px-6 py-3 rounded-full shadow-md whitespace-nowrap active:scale-95 transition-transform" type="submit">
+                Send Free Checklist
+              </button>
+            </form>
+
+            <p class="text-[11px] text-surface-variant/70 pt-1">
+              No spam ever. 100% free instant PDF download. Unsubscribe anytime with 1 click.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. TESTIMONIALS & TRUST BADGES -->
+    <section class="w-full bg-surface py-12 lg:py-16">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col gap-8">
+        
+        <div class="text-center max-w-xl mx-auto">
+          <span class="text-xs font-bold text-secondary uppercase tracking-widest">Community Proof</span>
+          <h2 class="font-headline font-extrabold text-2xl lg:text-3xl text-primary pt-1">
+            Trusted by Creators Around the World
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-surface-container flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center text-secondary">
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface italic leading-relaxed">
+                “Mira's tool comparisons saved me hundreds of dollars and weeks of frustration. Publisher Rocket alone doubled my monthly paperback royalties!”
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-6 border-t border-surface-container mt-4">
+              <img class="w-10 h-10 rounded-full object-cover" 
+                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2cLaHX-jfyQqbheUsFTXuT9Y7h6xVfcwlDmsbLuRspx4MeO9OZIjKyufgalff1cbn6PgHrE8scxROGN4sXQoIC0aMWIFdGplg9At5asDhHIYr_B6-8VB8sZGK-MGsB7hfeD1TI71Aqy-b2lf2jGn6So-m1EqmhSmPLtUKAWiB_Q3L96eUWGva2FnyOl42JKxY7VeQv2lOD6gROMfohv3TIvcOeJBFg0Auwtdz_M0" 
+                   alt="David K."/>
+              <div>
+                <strong class="font-headline font-bold text-xs text-primary block">David K.</strong>
+                <span class="text-[11px] text-on-surface-variant">Non-fiction Author • Verified</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-surface-container flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center text-secondary">
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface italic leading-relaxed">
+                “The interior template recommendations are pristine. My journals went from zero sales to over 400 copies a month on Amazon.”
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-6 border-t border-surface-container mt-4">
+              <img class="w-10 h-10 rounded-full object-cover" 
+                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2yD21JRS6rjDgJn6bkwGLBwiBiH5CDmUechokr6bQAQDmlKHVxg0S-yZLnWqvpIpNfGuxD4bC_uyxwAk1tYMVuMYGvgHqyKPgr6H37Peikvrm41eJToGP8L5SQiWvfgm7cyCWCSjGwxxpF90IAuexIHPDuUtbQw5ohUyUPDIqqBWfpkzF_4YXZflzfl0QnFx8CPeTe9BHI8KcsJeRdeahupN8B-2a7CXTLk4OzDs" 
+                   alt="Priya M."/>
+              <div>
+                <strong class="font-headline font-bold text-xs text-primary block">Priya M.</strong>
+                <span class="text-[11px] text-on-surface-variant">Low-Content Creator • Verified</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-surface-container flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center text-secondary">
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-1">star</span>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface italic leading-relaxed">
+                “Honest, transparent reviews without the hype. If Mira recommends a tool, I know it actually works seamlessly with KDP print engines.”
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-6 border-t border-surface-container mt-4">
+              <img class="w-10 h-10 rounded-full object-cover" 
+                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDNZ0eTd-fK9uej8wLDHfGXsSGMzCmdqHrwMptIGtQr3jsAqAHCHjzmYBOt_uuAVyUjgmdjT5Xf0MjE8fT3clJ_hoPxYjUg7UUEjzoaMLBsAdKI43rTCNPi180aExSNAJPn9G-7JVpDevqjwW373TIn2a6Qmu82GVRzPSjMPBnUoTocZinREkmkXpR7KQ27f6GOnccSz-BBQvDiJ-wOBu7NNdTjoKkrusv2i9ftJM" 
+                   alt="Christian L."/>
+              <div>
+                <strong class="font-headline font-bold text-xs text-primary block">Christian L.</strong>
+                <span class="text-[11px] text-on-surface-variant">Children's Book Author • Verified</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-4">
+          <div class="flex items-center justify-center gap-2 bg-surface-container p-3 rounded-xl text-center text-xs font-semibold">
+            <span class="material-symbols-outlined text-primary text-[20px]">policy</span>
+            <span>Editorial Independence</span>
+          </div>
+          <div class="flex items-center justify-center gap-2 bg-surface-container p-3 rounded-xl text-center text-xs font-semibold">
+            <span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+            <span>Amazon Compliant</span>
+          </div>
+          <div class="flex items-center justify-center gap-2 bg-surface-container p-3 rounded-xl text-center text-xs font-semibold">
+            <span class="material-symbols-outlined text-primary text-[20px]">fact_check</span>
+            <span>Verified User Tested</span>
+          </div>
+          <div class="flex items-center justify-center gap-2 bg-surface-container p-3 rounded-xl text-center text-xs font-semibold">
+            <span class="material-symbols-outlined text-secondary text-[20px]">update</span>
+            <span>Updated Weekly</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="w-full bg-surface-container-low text-on-surface py-12 border-t border-surface-container">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-8">
+        
+        <div class="lg:col-span-2 flex flex-col gap-3">
+          <div class="flex items-center gap-2">
+            <img alt="Mira Brand Logo" class="h-7 w-auto object-contain" 
+                 src="https://lh3.googleusercontent.com/aida/AEtjO1UcJR2XOgtwDcpi8E0u4snl7zUSTrbco-OV2ckLZD2l9nv3YhNZ2KpZY_qU73gUdueBm_Sk9ituGy-uOQHDHU0o0GRsZU3hctIxv6YHMj1_4fLzuFZG1z1h0Hj6tY3J6Ffy_Vliwwvd2kzjwSoMVXVmKVLUFHZH1AEY6i0sKT_WRNSZNO7eaozllOsWWI2ON4L2tNWK65aIv_X2eNEKqKo6wHRC4D6KMX39Ed0gReQe"/>
+            <span class="font-headline font-bold text-xl text-primary tracking-tight">Mira</span>
+          </div>
+          <p class="text-xs text-on-surface-variant max-w-sm leading-relaxed">
+            Editorial curation, vetted gear, and strategic publishing workflows for modern independent authors, KDP publishers, and dedicated bibliophiles.
+          </p>
+          <div class="flex items-center gap-2 pt-2">
+            <button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Forum">
+              <span class="material-symbols-outlined text-[16px]">forum</span>
+            </button>
+            <button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="RSS">
+              <span class="material-symbols-outlined text-[16px]">rss_feed</span>
+            </button>
+            <button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Podcasts">
+              <span class="material-symbols-outlined text-[16px]">podcasts</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2.5">
+          <h3 class="font-headline font-bold text-xs uppercase tracking-wider text-primary">Explore</h3>
+          <ul class="space-y-1.5 text-xs text-on-surface-variant">
+            <li><a href="#picks" class="hover:text-primary transition-colors">Top Picks Directory</a></li>
+            <li><a href="#calculator" class="hover:text-primary transition-colors">Royalty Calculator</a></li>
+            <li><a href="#how-it-works" class="hover:text-primary transition-colors">KDP Publishing Flow</a></li>
+            <li><a href="#tools-matrix" class="hover:text-primary transition-colors">Tool Comparison</a></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-2.5">
+          <h3 class="font-headline font-bold text-xs uppercase tracking-wider text-primary">KDP Resources</h3>
+          <ul class="space-y-1.5 text-xs text-on-surface-variant">
+            <li><button onclick="filterByCategory('Keyword & Niche Research')" class="hover:text-primary transition-colors">Keyword Tools</button></li>
+            <li><button onclick="filterByCategory('Design & Interior Tools')" class="hover:text-primary transition-colors">Cover Formatting</button></li>
+            <li><button onclick="filterByCategory('Low Content Books')" class="hover:text-primary transition-colors">Low Content Assets</button></li>
+            <li><button onclick="filterByCategory('Coloring Books')" class="hover:text-primary transition-colors">Coloring Book Guides</button></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-2.5">
+          <h3 class="font-headline font-bold text-xs uppercase tracking-wider text-primary">Legal &amp; Policy</h3>
+          <ul class="space-y-1.5 text-xs text-on-surface-variant">
+            <li><button onclick="openLeadModal()" class="hover:text-primary transition-colors">Free Publishing Guide</button></li>
+            <li><a href="#blog" class="hover:text-primary transition-colors">Publishing Dispatch</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Amazon Affiliate Disclosure</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Affiliate Disclaimer Box -->
+      <div class="bg-surface-container p-4 rounded-xl mb-6 border border-surface-container-high">
+        <p class="text-xs text-on-surface-variant text-center leading-relaxed">
+          <strong>Amazon Associate Disclaimer:</strong> As an Amazon Associate, I earn from qualifying purchases. Recommended titles and tools are rigorously curated for independent authors and book makers.
+        </p>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
+        <p>© 2025 Mira. Independent Publishing Ecosystem. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-primary transition-colors">Privacy Notice</a>
+          <a href="#" class="hover:text-primary transition-colors">Affiliate Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= MOBILE FIXED BOTTOM TAB BAR ================= -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface/95 backdrop-blur-xl border-t border-surface-container py-1.5 px-3">
+    <div class="flex justify-around items-center">
+      <a href="#picks" class="flex flex-col items-center text-primary font-bold">
+        <span class="material-symbols-outlined text-[20px]">auto_stories</span>
+        <span class="text-[10px] mt-0.5">Top Picks</span>
+      </a>
+      <a href="#calculator" class="flex flex-col items-center text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined text-[20px]">calculate</span>
+        <span class="text-[10px] mt-0.5">Royalty</span>
+      </a>
+      <a href="#tools-matrix" class="flex flex-col items-center text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined text-[20px]">hardware</span>
+        <span class="text-[10px] mt-0.5">Tools</span>
+      </a>
+      <button onclick="toggleSavedDrawer(true)" class="flex flex-col items-center text-on-surface-variant hover:text-primary relative">
+        <span class="material-symbols-outlined text-[20px]">bookmark</span>
+        <span class="text-[10px] mt-0.5">Saved</span>
+        <span id="mobile-saved-badge" class="absolute -top-1 right-2 bg-secondary-container text-tertiary text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center hidden">0</span>
+      </button>
+      <button onclick="openLeadModal()" class="flex flex-col items-center text-secondary font-semibold">
+        <span class="material-symbols-outlined text-[20px]">download</span>
+        <span class="text-[10px] mt-0.5">Free Guide</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= PRODUCT DETAIL MODAL ================= -->
+  <div id="product-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-surface-container-lowest rounded-3xl max-w-xl w-full p-6 shadow-2xl border border-surface-container relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeProductModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+      
+      <div id="modal-content">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SAVED ITEMS DRAWER ================= -->
+  <div id="saved-drawer" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden justify-end">
+    <div class="bg-surface-container-lowest w-full max-w-md h-full p-6 shadow-2xl flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-surface-container">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-secondary text-[22px]">bookmark</span>
+            <h3 class="font-headline font-bold text-lg text-primary">Your Saved Tools &amp; Books</h3>
+          </div>
+          <button onclick="toggleSavedDrawer(false)" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary">
+            <span class="material-symbols-outlined text-[18px]">close</span>
+          </button>
+        </div>
+        <div id="saved-items-list" class="divide-y divide-surface-container overflow-y-auto max-h-[70vh] py-2">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-surface-container">
+        <button onclick="openLeadModal('Export Saved Reading Shelf')" class="w-full py-3 rounded-full bg-secondary-container text-tertiary font-bold text-xs uppercase tracking-wider hover:brightness-95">
+          Email My Reading Shelf List
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SEARCH MODAL ================= -->
+  <div id="search-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-start justify-center pt-20 px-4">
+    <div class="bg-surface-container-lowest rounded-3xl max-w-2xl w-full p-5 shadow-2xl border border-surface-container">
+      <div class="flex items-center gap-3 pb-3 border-b border-surface-container">
+        <span class="material-symbols-outlined text-secondary text-[22px]">search</span>
+        <input id="search-input" type="text" placeholder="Search KDP books, design software, keyword tools..." oninput="handleSearch(this.value)"
+               class="w-full bg-transparent text-sm focus:outline-none font-medium text-primary placeholder:text-on-surface-variant"/>
+        <button onclick="toggleSearchModal(false)" class="text-xs uppercase font-bold text-on-surface-variant hover:text-primary">
+          ESC
+        </button>
+      </div>
+      <div id="search-results" class="max-h-80 overflow-y-auto py-2 space-y-2">
+        <p class="text-xs text-on-surface-variant py-4 text-center">Type something to find vetted resources...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= LEAD MAGNET MODAL ================= -->
+  <div id="lead-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-surface-container-lowest rounded-3xl max-w-md w-full p-6 shadow-2xl border border-surface-container relative">
+      <button onclick="closeLeadModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+
+      <div class="text-center space-y-3">
+        <div class="w-12 h-12 rounded-full bg-secondary-container/20 text-secondary mx-auto flex items-center justify-center">
+          <span class="material-symbols-outlined text-[24px]">menu_book</span>
+        </div>
+        <h3 class="font-headline font-bold text-xl text-primary">Get the 2025 KDP Launch Checklist</h3>
+        <p class="text-xs text-on-surface-variant leading-relaxed">
+          The 18-point pre-flight manual used by six-figure Amazon indie publishers: margins, bleed formulas, keyword research tips, and category lookup shortcuts.
+        </p>
+
+        <form onsubmit="handleDownloadGuide(event)" class="space-y-3 pt-2 text-left">
+          <div>
+            <label class="block text-[11px] font-bold uppercase text-on-surface-variant mb-1">Author / Pen Name</label>
+            <input id="lead-name" type="text" required placeholder="e.g. Elena Rostova" class="w-full px-4 py-2.5 rounded-xl border border-surface-container text-xs bg-surface focus:outline-none focus:ring-2 focus:ring-secondary-container"/>
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold uppercase text-on-surface-variant mb-1">Email Address</label>
+            <input id="lead-email" type="email" required placeholder="name@authorstudio.com" class="w-full px-4 py-2.5 rounded-xl border border-surface-container text-xs bg-surface focus:outline-none focus:ring-2 focus:ring-secondary-container"/>
+          </div>
+          <button type="submit" class="w-full py-3 rounded-full bg-secondary-container hover:bg-secondary-fixed-dim text-tertiary font-bold text-xs uppercase tracking-wider transition-all shadow-md active:scale-95">
+            Download PDF Instantly
+          </button>
+        </form>
+        <p class="text-[10px] text-on-surface-variant">Instant PDF download. We respect your inbox privacy.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-20 lg:bottom-8 right-6 z-50 bg-primary text-on-primary px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2 text-xs font-semibold transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <span class="material-symbols-outlined text-secondary-container text-[18px]">info</span>
+    <span id="toast-text">Action completed</span>
+  </div>
+
+  <!-- ================= JAVASCRIPT STATE & LOGIC ================= -->
+  <script>
+    // Product data directory
+    const PRODUCTS = [
+      {
+        id: "book-bolt",
+        title: "Book Bolt Studio Pro",
+        category: "Design & Interior Tools",
+        badge: "Staff Pick",
+        badgeClass: "bg-secondary-container text-tertiary",
+        price: "$9.99/mo",
+        rawPrice: 9.99,
+        rating: 4.9,
+        reviews: 1420,
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCjk592oqKNDmk9plm-_9H82fJEu_Oy8U0oZQNF12prgwwaZc_3CUvNXZmdKbJxmtV_R-Xn0b4hiKEl0gh9gtZV8-wUv5SWYaS8mDrLr7D1EUIgubB0ux9ZGtTpQklSU6Tx6xlXcOPawnIy_lEoBJhB68MCx4AlPrEQVNx4KXtmAiigm1uBDXX8bZJGWRBga4gvSCKPcYfZ-nlK_kshYDzgO_Z1LK__B9jAtOHAav8",
+        desc: "All-in-one low-content book cover designer, interior generator & real-time Amazon keyword intelligence.",
+        linkText: "Check Price",
+        amazonLink: "#",
+        features: ["Drag-and-drop cover engine", "1,200+ pre-formatted interior templates", "Niche BSR trend tracker"]
+      },
+      {
+        id: "formatting-blueprint",
+        title: "The 2025 KDP Formatting Blueprint",
+        category: "Self-Publishing Guides",
+        badge: "Bestseller",
+        badgeClass: "bg-primary text-on-primary",
+        price: "$14.99",
+        rawPrice: 14.99,
+        rating: 4.8,
+        reviews: 890,
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuC5mH-PT8VqfqTHI8zZFXi167vd2arWUhK7emsX_OOPwMyhqIqAttMNW47uq4u_HhawqUAxRHTB3UqhLnf7wHvRFiXcXOZKlLG1cHQAYAaTZzGtBobZmZ__-aIjJW5vFQDS70S-q0q0MTYhy_xJfVNLw1O6on3H_ZIEYLn6ZLPELccNbdllaU9wOVHxUFtAqwlj9z1dscYXNyPag75cRp75nSNcuSI2QkP6u-pPyZw",
+        desc: "Step-by-step masterclass on paperback margins, bleed settings, spine width calculations and EPUB exports.",
+        linkText: "View on Amazon",
+        amazonLink: "#",
+        features: ["Passes Amazon interior inspection 100%", "Includes InDesign & Word templates", "Spine width calculator included"]
+      },
+      {
+        id: "gratitude-journal",
+        title: "Minimalist Gratitude & Habit Journal",
+        category: "Journals & Planners",
+        badge: "Top Value",
+        badgeClass: "bg-secondary-container text-tertiary",
+        price: "$8.95",
+        rawPrice: 8.95,
+        rating: 4.9,
+        reviews: 3150,
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVyk8gMwoVq39RJ7SxsEw9ZLWrZxK1KVsSsdStmIz3RDzh6ntyijD_B8fjYpy-P471tQKh0M8nq2UaiEPFV17H7jFan-upCPNExalCa81H8-Nz8_uR0lXKLUHKB75prkR-zf9-WUW3d1tbKBWRUBAEAkCG-Pou81DPmld4DMAhTYdxtyDZAZB2Fr2X4nbFnwUmcZoenqAG_9YkTb_HnxJ1NclTH4YYH1D0lO19oJ0",
+        desc: "Premium 120-page 6x9 layout with Amazon 5-star verified reviews, dot grids, and ready-to-sell assets.",
+        linkText: "View on Amazon",
+        amazonLink: "#",
+        features: ["120 gsm paper bleed specs", "Proven interior design layout", "Full commercial reproduction rights"]
+      },
+      {
+        id: "publisher-rocket",
+        title: "Publisher Rocket: Author SEO",
+        category: "Keyword & Niche Research",
+        badge: "Industry Standard",
+        badgeClass: "bg-primary text-on-primary",
+        price: "$97.00",
+        rawPrice: 97.00,
+        rating: 4.9,
+        reviews: 4820,
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCTywHzEL6CLJ25cyqdhCZ9MUGvO8PZ182FvE6MDwBnmp3FS3_Rkd93exSuLSsBMffpirxo_cnsl2eXQQc9gOdFmc6cHFwbzgcXpYl85MrAsIwdT4qsEwxg9lgn2QGaSkYuAQ9ChLpctrijsVNlGHydXpDTsD3xeIDBKzk-wpbz3YBgLAq-geDEnX2mtuC7J6Zt9aqWS-Y2_yJNRItoXIwfqhnBSBrNgXiruTPTr-M",
+        desc: "Find profitable Amazon categories, real monthly search volumes, and competitor royalties in seconds.",
+        linkText: "Get Lifetime License",
+        amazonLink: "#",
+        features: ["Direct Amazon API data feeds", "Historical competitor royalty estimates", "One-click category recommendations"]
+      },
+      {
+        id: "botanical-coloring",
+        title: "Mindful Botanical Coloring Book",
+        category: "Coloring Books",
+        badge: "Trending Niche",
+        badgeClass: "bg-secondary-container text-tertiary",
+        price: "$7.99",
+        rawPrice: 7.99,
+        rating: 4.7,
+        reviews: 2100,
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCkeVQU1Mnpbb5znAq3jR-sq8Yh4ahqsc62v2fj2j3gra-V_8fst4FTH3S-ZbY63S9y_vaOcfWmWvlVUBWQ91OoAi1ENEd8uMMbotbLzjM8FQk141kETtppy9PoAuVlAOQHyh8AsjjqYdLQhlBd0c2xyblCLXaIqpDHw7n8oRYM2u3SGRu14U6oWTnsLfasitTa2UF3VU4dqvi06BfSsvZ3ccqz2q7I233jIFp_wVA",
+        desc: "50 hand-drawn botanical pages, bleed-proof single-sided layouts, high-ranking evergreen category.",
+        linkText: "View on Amazon",
+        amazonLink: "#",
+        features: ["Clean vector lines ready for KDP", "Single-sided to prevent bleed-through", "High average BSR rank"]
+      },
+      {
+        id: "affinity-templates",
+        title: "Affinity Publisher Master Templates",
+        category: "Low Content Books",
+        badge: "Creator Asset",
+        badgeClass: "bg-surface-container text-tertiary",
+        price: "$19.00",
+        rawPrice: 19.00,
+        rating: 4.8,
+        reviews: 640,
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCgIyHPaqdTfbDKlR2KPOJ4TcJve5_AryOEOwA90Au3x0DGkues3_c6kC_DFOrOUQX_jDe-m0WG56UizV7wCjtdL91i0nkI1gH3juY11B6lONDnQhP1jwLOTcVwHZLVzvhKcCqlrVerVk9qNytHnvU6TrCSeAzoyoBZD8-BaN3Sa68tNEOMOm6dk3IESYs64OuDAqf-fPmzLmbbeuoxPTTEXdQogDTIEu8GU_rWCqg",
+        desc: "45+ ready-to-upload interior files formatted for 6x9, 8.5x11 and square trim sizes.",
+        linkText: "Get Asset Bundle",
+        amazonLink: "#",
+        features: ["Affinity, Canva & InDesign formats", "Pre-set bleed and safety margins", "Commercial re-sale license"]
+      }
+    ];
+
+    // Tool Matrix Table Data
+    const MATRIX = [
+      { initial: "B", bg: "bg-primary-container text-on-primary", name: "Book Bolt", sub: "All-in-One Suite", bestFor: "Low Content & Interiors", pros: "Drag-drop designer, bulk interior maker, niche finder", rating: 4.9, price: "$9.99/mo" },
+      { initial: "R", bg: "bg-tertiary text-on-tertiary", name: "Publisher Rocket", sub: "Dave Chesson", bestFor: "Amazon SEO & Category Mining", pros: "Accurate monthly search volume, competitor royalties", rating: 4.9, price: "$97 Once" },
+      { initial: "C", bg: "bg-secondary-container text-tertiary", name: "Canva Pro", sub: "Visual Design", bestFor: "Cover Graphics & Layouts", pros: "Millions of commercial fonts, vector art, print PDF export", rating: 4.8, price: "$12.99/mo" },
+      { initial: "H", bg: "bg-surface-container-high text-primary", name: "Helium 10 (Cerebro)", sub: "Enterprise SEO", bestFor: "Deep Keyword & ASIN Ranking", pros: "Advanced reverse ASIN lookup, index checker, tracking", rating: 4.7, price: "$39/mo" },
+      { initial: "A", bg: "bg-surface-tint text-on-primary", name: "Atticus", sub: "Book Typesetting", bestFor: "Formatting & Typesetting", pros: "Simultaneous interior export for print and ebook", rating: 4.9, price: "$147 Once" }
+    ];
+
+    const CATEGORIES = [
+      { id: "all", label: "All Categories", emoji: "🔥" },
+      { id: "Low Content Books", label: "Low Content Books", emoji: "📓" },
+      { id: "Journals & Planners", label: "Journals & Planners", emoji: "✍️" },
+      { id: "Self-Publishing Guides", label: "Self-Publishing Guides", emoji: "📚" },
+      { id: "Design & Interior Tools", label: "Design & Interior Tools", emoji: "🎨" },
+      { id: "Coloring Books", label: "Coloring Books", emoji: "🖍️" },
+      { id: "Keyword & Niche Research", label: "Keyword & Niche Research", emoji: "📊" }
+    ];
+
+    // State
+    let currentCategory = "all";
+    let savedItems = JSON.parse(localStorage.getItem("mira_saved") || "[]");
+    let calcInteriorType = "bw"; // 'bw', 'premium-color', 'standard-color'
+
+    // Init
+    document.addEventListener("DOMContentLoaded", () => {
+      renderCategoryChips();
+      renderProducts();
+      renderMatrix();
+      updateSavedBadge();
+      updateCalculator();
+
+      // Keyboard escape to close modals
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeProductModal();
+          toggleSearchModal(false);
+          toggleSavedDrawer(false);
+          closeLeadModal();
+        }
+      });
+    });
+
+    // Render Categories
+    function renderCategoryChips() {
+      const container = document.getElementById("category-chips");
+      container.innerHTML = CATEGORIES.map(cat => {
+        const isActive = (cat.id === currentCategory) || (cat.id === "all" && currentCategory === "all");
+        const activeClass = isActive 
+          ? "bg-primary text-on-primary shadow-sm" 
+          : "bg-surface-container-lowest text-on-surface hover:bg-surface-container";
+        return `
+          <button onclick="filterByCategory('${cat.id}')" 
+                  class="flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap shrink-0 transition-all ${activeClass}">
+            <span>${cat.emoji}</span>
+            <span>${cat.label}</span>
+          </button>
+        `;
+      }).join("");
+    }
+
+    // Filter Logic
+    function filterByCategory(catId) {
+      currentCategory = catId;
+      document.getElementById("active-tag-label").textContent = catId === "all" ? "Showing all categories" : `Filtered: ${catId}`;
+      renderCategoryChips();
+      renderProducts();
+    }
+
+    // Render Products Grid
+    function renderProducts() {
+      const grid = document.getElementById("products-grid");
+      const filtered = currentCategory === "all" 
+        ? PRODUCTS 
+        : PRODUCTS.filter(p => p.category === currentCategory);
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `<div class="col-span-3 py-12 text-center text-on-surface-variant text-sm">No items found in this category.</div>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(item => {
+        const isSaved = savedItems.includes(item.id);
+        return `
+          <div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md border border-surface-container transition-all flex flex-col justify-between group">
+            <div>
+              <div class="relative rounded-xl overflow-hidden bg-surface-container-high h-48 mb-4">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                     src="${item.image}" alt="${item.title}"/>
+                
+                <span class="absolute top-3 left-3 ${item.badgeClass} text-[11px] font-bold px-2.5 py-0.5 rounded-full shadow-sm">
+                  ${item.badge}
+                </span>
+
+                <!-- Bookmark Button -->
+                <button onclick="toggleBookmark('${item.id}', event)" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/90 backdrop-blur-sm text-tertiary flex items-center justify-center hover:scale-110 active:scale-95 transition-transform">
+                  <span class="material-symbols-outlined text-[18px] ${isSaved ? 'text-secondary fill-1' : 'text-on-surface-variant'}">bookmark</span>
+                </button>
+
+                <span class="absolute bottom-3 right-3 bg-primary/90 text-on-primary text-[10px] font-semibold px-2 py-0.5 rounded-full">
+                  ${item.category}
+                </span>
+              </div>
+
+              <div class="flex items-center justify-between pb-1">
+                <div class="flex items-center gap-1 text-secondary">
+                  <span class="material-symbols-outlined text-[16px] fill-1">star</span>
+                  <span class="text-xs font-bold text-on-surface">${item.rating}</span>
+                  <span class="text-xs text-on-surface-variant">(${item.reviews.toLocaleString()})</span>
+                </div>
+                <button onclick="openProductModal('${item.id}')" class="text-xs font-bold text-primary hover:text-secondary">
+                  Quick View
+                </button>
+              </div>
+
+              <h3 class="font-headline font-bold text-base text-primary mb-1 group-hover:text-secondary transition-colors cursor-pointer" onclick="openProductModal('${item.id}')">
+                ${item.title}
+              </h3>
+              <p class="text-xs text-on-surface-variant line-clamp-2 leading-relaxed">
+                ${item.desc}
+              </p>
+            </div>
+
+            <!-- Card Bottom Bar -->
+            <div class="pt-4 mt-4 bg-surface-container-low/60 -mx-5 -mb-5 p-5 rounded-b-2xl flex items-center justify-between border-t border-surface-container">
+              <div>
+                <p class="text-[10px] uppercase font-bold text-on-surface-variant">Estimated Price</p>
+                <p class="font-headline font-bold text-base text-primary">${item.price}</p>
+              </div>
+              <button onclick="handleAffiliateClick('${item.title}')" class="inline-flex items-center gap-1.5 bg-secondary-container hover:bg-secondary-fixed-dim text-tertiary font-bold text-xs px-4 py-2 rounded-full shadow-sm transition-transform active:scale-95">
+                <span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+                <span>${item.linkText}</span>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    // Render Matrix Table
+    function renderMatrix() {
+      const tbody = document.getElementById("matrix-table-body");
+      tbody.innerHTML = MATRIX.map(row => `
+        <tr class="hover:bg-surface-container-low/50 transition-colors">
+          <td class="py-4 px-6">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg ${row.bg} flex items-center justify-center font-headline font-bold text-base">
+                ${row.initial}
+              </div>
+              <div>
+                <strong class="font-headline font-bold text-xs text-primary block">${row.name}</strong>
+                <span class="text-[11px] text-on-surface-variant">${row.sub}</span>
+              </div>
+            </div>
+          </td>
+          <td class="py-4 px-4 font-medium text-on-surface">${row.bestFor}</td>
+          <td class="py-4 px-4 text-on-surface-variant max-w-xs">${row.pros}</td>
+          <td class="py-4 px-4">
+            <div class="flex items-center gap-1 text-secondary font-bold">
+              <span class="material-symbols-outlined text-[16px] fill-1">star</span>
+              <span>${row.rating}</span>
+            </div>
+          </td>
+          <td class="py-4 px-4 font-bold text-primary">${row.price}</td>
+          <td class="py-4 px-6 text-right">
+            <button onclick="handleAffiliateClick('${row.name}')" class="inline-flex items-center gap-1 bg-secondary-container hover:bg-secondary-fixed-dim text-tertiary font-bold text-xs px-3 py-1.5 rounded-full shadow-sm">
+              <span>View</span>
+              <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+            </button>
+          </td>
+        </tr>
+      `).join("");
+    }
+
+    // KDP Royalty Calculator Logic
+    function setCalcInterior(type, btnElement) {
+      calcInteriorType = type;
+      document.querySelectorAll(".calc-type-btn").forEach(el => {
+        el.className = "calc-type-btn py-2 px-3 text-xs font-semibold rounded-xl bg-surface-container text-tertiary hover:bg-surface-container-high";
+      });
+      btnElement.className = "calc-type-btn py-2 px-3 text-xs font-semibold rounded-xl bg-primary text-on-primary";
+      updateCalculator();
+    }
+
+    function updateCalculator() {
+      const pages = parseInt(document.getElementById("input-pages").value);
+      const price = parseFloat(document.getElementById("input-price").value) || 0;
+      document.getElementById("page-count-val").textContent = `${pages} pages`;
+
+      // Official Amazon KDP standard printing calculation for Amazon.com (USD):
+      // Black & White: $1.00 base + ($0.012 * page count)
+      // Standard Color: $1.00 base + ($0.036 * page count)
+      // Premium Color: $1.00 base + ($0.065 * page count)
+      let baseCost = 1.00;
+      let costPerPage = 0.012;
+
+      if (calcInteriorType === "standard-color") costPerPage = 0.036;
+      if (calcInteriorType === "premium-color") costPerPage = 0.065;
+
+      const printCost = baseCost + (pages * costPerPage);
+      const amazonCut = price * 0.40;
+      const netRoyalty = (price * 0.60) - printCost;
+      const margin = price > 0 ? (netRoyalty / price) * 100 : 0;
+
+      // Update UI
+      document.getElementById("calc-net-royalty").textContent = netRoyalty > 0 ? `$${netRoyalty.toFixed(2)}` : "$0.00 (Loss)";
+      document.getElementById("calc-summary-price").textContent = `$${price.toFixed(2)}`;
+      document.getElementById("calc-summary-amazon").textContent = `$${amazonCut.toFixed(2)}`;
+      document.getElementById("calc-summary-print").textContent = `$${printCost.toFixed(2)}`;
+      document.getElementById("calc-summary-margin").textContent = `${Math.max(0, margin).toFixed(1)}%`;
+    }
+
+    // Bookmark handling
+    function toggleBookmark(id, event) {
+      if (event) event.stopPropagation();
+      const index = savedItems.indexOf(id);
+      if (index > -1) {
+        savedItems.splice(index, 1);
+        showToast("Removed from your saved list");
+      } else {
+        savedItems.push(id);
+        showToast("Saved to your reading shelf!");
+      }
+      localStorage.setItem("mira_saved", JSON.stringify(savedItems));
+      updateSavedBadge();
+      renderProducts();
+    }
+
+    function updateSavedBadge() {
+      const count = savedItems.length;
+      const dBadge = document.getElementById("saved-badge-count");
+      const mBadge = document.getElementById("mobile-saved-badge");
+      
+      if (count > 0) {
+        dBadge.textContent = count;
+        dBadge.classList.remove("hidden");
+        mBadge.textContent = count;
+        mBadge.classList.remove("hidden");
+      } else {
+        dBadge.classList.add("hidden");
+        mBadge.classList.add("hidden");
+      }
+    }
+
+    function toggleSavedDrawer(open) {
+      const drawer = document.getElementById("saved-drawer");
+      if (open) {
+        renderSavedDrawerList();
+        drawer.classList.remove("hidden");
+        drawer.classList.add("flex");
+      } else {
+        drawer.classList.add("hidden");
+        drawer.classList.remove("flex");
+      }
+    }
+
+    function renderSavedDrawerList() {
+      const list = document.getElementById("saved-items-list");
+      if (savedItems.length === 0) {
+        list.innerHTML = `<p class="py-8 text-center text-xs text-on-surface-variant">No items saved yet. Click the bookmark icon on any card.</p>`;
+        return;
+      }
+      const items = PRODUCTS.filter(p => savedItems.includes(p.id));
+      list.innerHTML = items.map(item => `
+        <div class="py-3 flex items-center justify-between gap-3">
+          <div class="flex items-center gap-3 min-w-0">
+            <img class="w-12 h-12 rounded-lg object-cover shrink-0" src="${item.image}" alt="${item.title}"/>
+            <div class="min-w-0">
+              <h4 class="font-headline font-bold text-xs text-primary truncate">${item.title}</h4>
+              <p class="text-[11px] text-secondary font-semibold">${item.price}</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-1 shrink-0">
+            <button onclick="handleAffiliateClick('${item.title}')" class="p-1.5 rounded-full hover:bg-surface-container text-primary">
+              <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+            </button>
+            <button onclick="toggleBookmark('${item.id}')" class="p-1.5 rounded-full hover:bg-surface-container text-error">
+              <span class="material-symbols-outlined text-[18px]">delete</span>
+            </button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    // Product Modal
+    function openProductModal(id) {
+      const item = PRODUCTS.find(p => p.id === id);
+      if (!item) return;
+
+      const isSaved = savedItems.includes(item.id);
+      const content = document.getElementById("modal-content");
+      content.innerHTML = `
+        <div class="flex flex-col sm:flex-row gap-5 items-start">
+          <img class="w-full sm:w-44 h-52 object-cover rounded-xl shadow-md" src="${item.image}" alt="${item.title}"/>
+          <div class="flex-1 space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="${item.badgeClass} text-[11px] font-bold px-2.5 py-0.5 rounded-full">${item.badge}</span>
+              <span class="text-xs text-on-surface-variant uppercase font-semibold">${item.category}</span>
+            </div>
+            <h3 class="font-headline font-bold text-xl text-primary">${item.title}</h3>
+            <div class="flex items-center gap-1 text-secondary text-xs">
+              <span class="material-symbols-outlined text-[16px] fill-1">star</span>
+              <span class="font-bold text-on-surface">${item.rating}</span>
+              <span class="text-on-surface-variant">(${item.reviews} verified reviews)</span>
+            </div>
+            <p class="text-sm font-headline font-bold text-secondary">${item.price}</p>
+          </div>
+        </div>
+
+        <div class="mt-5 space-y-3 pt-4 border-t border-surface-container text-xs">
+          <p class="text-on-surface-variant leading-relaxed text-sm">${item.desc}</p>
+          <div class="bg-surface-container-low p-3.5 rounded-xl space-y-1.5">
+            <span class="font-bold uppercase tracking-wider text-[10px] text-tertiary">Tested Highlights:</span>
+            ${item.features.map(f => `
+              <div class="flex items-center gap-2 text-on-surface">
+                <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                <span>${f}</span>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+
+        <div class="mt-6 flex items-center gap-3">
+          <button onclick="handleAffiliateClick('${item.title}')" class="flex-1 py-3 rounded-full bg-secondary-container hover:bg-secondary-fixed-dim text-tertiary font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm">
+            <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+            <span>View on Amazon / Vendor</span>
+          </button>
+          <button onclick="toggleBookmark('${item.id}'); openProductModal('${item.id}');" class="px-4 py-3 rounded-full border border-surface-container bg-surface hover:bg-surface-container flex items-center justify-center text-tertiary">
+            <span class="material-symbols-outlined text-[18px] ${isSaved ? 'text-secondary fill-1' : ''}">bookmark</span>
+          </button>
+        </div>
+      `;
+
+      document.getElementById("product-modal").classList.remove("hidden");
+      document.getElementById("product-modal").classList.add("flex");
+    }
+
+    function closeProductModal() {
+      const modal = document.getElementById("product-modal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    // Search modal
+    function toggleSearchModal(open) {
+      const modal = document.getElementById("search-modal");
+      if (open) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        setTimeout(() => document.getElementById("search-input").focus(), 100);
+      } else {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+    }
+
+    function handleSearch(query) {
+      const container = document.getElementById("search-results");
+      const clean = query.trim().toLowerCase();
+      if (!clean) {
+        container.innerHTML = `<p class="text-xs text-on-surface-variant py-4 text-center">Type something to find vetted resources...</p>`;
+        return;
+      }
+      const results = PRODUCTS.filter(p => 
+        p.title.toLowerCase().includes(clean) || 
+        p.category.toLowerCase().includes(clean) || 
+        p.desc.toLowerCase().includes(clean)
+      );
+
+      if (results.length === 0) {
+        container.innerHTML = `<p class="text-xs text-on-surface-variant py-4 text-center">No matching titles or software found for "${query}".</p>`;
+        return;
+      }
+
+      container.innerHTML = results.map(item => `
+        <div onclick="openProductModal('${item.id}'); toggleSearchModal(false);" class="p-2.5 rounded-xl hover:bg-surface-container flex items-center justify-between cursor-pointer transition-colors">
+          <div class="flex items-center gap-3">
+            <img class="w-10 h-10 rounded-lg object-cover" src="${item.image}" alt="${item.title}"/>
+            <div>
+              <p class="font-headline font-bold text-xs text-primary">${item.title}</p>
+              <span class="text-[10px] text-on-surface-variant">${item.category}</span>
+            </div>
+          </div>
+          <span class="font-bold text-xs text-secondary">${item.price}</span>
+        </div>
+      `).join("");
+    }
+
+    // Lead Modal
+    function openLeadModal(title) {
+      document.getElementById("lead-modal").classList.remove("hidden");
+      document.getElementById("lead-modal").classList.add("flex");
+    }
+
+    function closeLeadModal() {
+      const modal = document.getElementById("lead-modal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    function handleDownloadGuide(e) {
+      e.preventDefault();
+      const email = document.getElementById("lead-email").value;
+      closeLeadModal();
+      showToast(`Checklist PDF generated for ${email}!`);
+    }
+
+    function handleNewsletterSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById("hero-nl-email").value;
+      document.getElementById("hero-nl-email").value = "";
+      showToast(`2025 KDP Launchpad sent to ${email}!`);
+    }
+
+    function readArticle(title) {
+      showToast(`Opening article: "${title}"`);
+    }
+
+    function handleAffiliateClick(name) {
+      showToast(`Navigating to verified listing for ${name}...`);
+    }
+
+    // Toast helper
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      document.getElementById("toast-text").textContent = message;
+      toast.classList.remove("translate-y-24", "opacity-0");
+      setTimeout(() => {
+        toast.classList.add("translate-y-24", "opacity-0");
+      }, 3500);
+    }
+  </script>
+</body>
+</html>
